@@ -16,7 +16,6 @@ def create_app():
     @app.route('/predict', methods=['POST'])
     def predict():
         data = request.get_json()
-        print(data)
         print(ext.predict([data['ratios']])[0])
         return f"{ext.predict([data['ratios']])[0]}"
     

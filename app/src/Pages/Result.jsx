@@ -13,7 +13,7 @@ export default function Result() {
 			headers: {
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify({ ratios: [7.080794504, 196.369496, 22014.09253, 7.122276793, 333.7757766, 426.2051107, 14.28497025, 66.39629295, 3.96678617] }),
+			body: JSON.stringify({ ratios: values }),
 		})
 			.then((res) => res.json())
 			.then((data) => {
