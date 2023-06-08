@@ -8,7 +8,7 @@ export default function Result() {
 	const [answer, setAnswer] = useState();
 	const [word, setWord] = useState("");
 	useEffect(() => {
-		fetch("http://127.0.0.1:5000/predict", {
+		fetch("https://water-quality-liui.onrender.com:5000/predict", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

@@ -8,6 +8,9 @@ ext = joblib.load('ext.joblib')
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/")
+def base():
+    return "<h1>Hello from server!</h1>"
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -18,4 +21,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
